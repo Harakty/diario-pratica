@@ -278,6 +278,10 @@ function DiarioPratica() {
   };
 
   const handleSubmit = async () => {
+    if (submittedThisWeek) {
+      const ok = window.confirm("Hai già aggiornato il Diario di Pratica questa settimana.\nVuoi sovrascrivere i dati precedenti?");
+      if (!ok) return;
+    }
     setSending(true); setError("");
     const data = {
       nome,
