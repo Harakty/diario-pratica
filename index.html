@@ -313,7 +313,7 @@ function DiarioPratica() {
   };
 
   const containerStyle = {
-    maxWidth: 420, margin: "0 auto", padding: "24px 16px 80px",
+    maxWidth: 420, margin: "0 auto", padding: "24px 16px 140px",
     minHeight: "100vh", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
     background: "linear-gradient(to bottom, #111827, #1f2937)", color: "#fff",
   };
@@ -337,7 +337,7 @@ function DiarioPratica() {
       position: "fixed", bottom: 0, left: "50%", transform: "translateX(-50%)",
       width: "100%", maxWidth: 420,
       background: "rgba(17,24,39,0.97)", borderTop: "1px solid rgba(212,175,55,0.2)",
-      padding: 0, backdropFilter: "blur(10px)", zIndex: 100
+      padding: "0 0 env(safe-area-inset-bottom, 0px)", backdropFilter: "blur(10px)", zIndex: 100
     }}>
       <div style={{ display: "flex" }}>
       {[
