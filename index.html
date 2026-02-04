@@ -132,22 +132,22 @@ function QualitySelector({ label, value, onChange }) {
   return (
     <div style={{ marginBottom: 20 }}>
       <div style={{ fontSize: 13, color: "#9ca3af", marginBottom: 8 }}>{label}</div>
-      <div style={{ display: "flex", gap: 6, justifyContent: "center", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", gap: 4, justifyContent: "center", flexWrap: "nowrap" }}>
         {qualityLevels.map((q) => (
           <button
             key={q.value}
             onClick={() => onChange(q.value)}
             style={{
-              padding: "8px 10px", borderRadius: 10,
+              padding: "6px 4px", borderRadius: 8,
               border: value === q.value ? "2px solid #d4af37" : "2px solid rgba(255,255,255,0.15)",
               background: value === q.value ? "rgba(212,175,55,0.2)" : "rgba(255,255,255,0.05)",
               color: value === q.value ? "#d4af37" : "#ccc",
               cursor: "pointer", fontSize: 13, transition: "all 0.15s",
-              display: "flex", flexDirection: "column", alignItems: "center", gap: 2, minWidth: 58
+              display: "flex", flexDirection: "column", alignItems: "center", gap: 1, minWidth: 0, flex: 1
             }}
           >
-            <span style={{ fontSize: 20 }}>{q.emoji}</span>
-            <span style={{ fontSize: 10 }}>{q.label}</span>
+            <span style={{ fontSize: 16 }}>{q.emoji}</span>
+            <span style={{ fontSize: 9 }}>{q.label}</span>
           </button>
         ))}
       </div>
@@ -313,7 +313,7 @@ function DiarioPratica() {
   };
 
   const containerStyle = {
-    maxWidth: 420, margin: "0 auto", padding: "24px 16px 140px",
+    maxWidth: 420, margin: "0 auto", padding: "24px 16px 80px",
     minHeight: "100vh", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
     background: "linear-gradient(to bottom, #111827, #1f2937)", color: "#fff",
   };
